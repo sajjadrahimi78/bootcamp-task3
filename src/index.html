@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تسک دوره جاوااسکریپت</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="header-title">لیست تراکنش ها</h1>
+
+        <div class="relative hidden">
+          <input type="text" class="search" id="search" placeholder="جستجو تراکنش..." />
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 search-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
+        </div>
+      </div>
+
+      <div class="flex h-screen">
+        <button class="btn-primary">بار گذاری تراکنش ها</button>
+      </div>
+
+      <div class="main hidden">
+        <h3 class="main-title main-content">لیست تراکنش های شما</h3>
+
+        <table class="table main-content">
+          <thead class="thead">
+            <tr>
+              <th>ردیف</th>
+              <th>نوع تراکنش</th>
+              <th class="price-icon">
+                <p>مبلغ</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  class="w-4 h-4 pSvg "
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </th>
+              <th>شماره پیگیری</th>
+              <th class="date-icon ">
+                <p>تاریخ تراکنش</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  class="w-4 h-4 dSvg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="tbody">
+            <!-- <tr>
+              <td>1</td>
+              <td>افزایش اعتبار</td>
+              <td>1000000</td>
+              <td>123270311</td>
+              <td>1399/08/12 ساعت 12:23</td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>برداشت از حساب</td>
+              <td>1000000</td>
+              <td>123270311</td>
+              <td>1399/08/12 ساعت 12:23</td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td>افزایش اعتبار</td>
+              <td>1000000</td>
+              <td>123270311</td>
+              <td>1399/08/12 ساعت 12:23</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </body>
+</html>
