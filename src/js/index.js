@@ -29,10 +29,10 @@ btn.addEventListener('click', () => {
 })
 
 searchInput.addEventListener("input", (e) => {
-  console.log(URL + `?id_like=${e.target.value}`);
-  console.log(URL + `?refId_like=${e.target.value}`);
+  // console.log(URL + `?id_like=${e.target.value}`);
+  // console.log(URL + `?refId_like=${e.target.value}`);
   axios
-      .get(URL +  `?id_like=${e.target.value}`)
+      .get(URL +  `?refId_like=${e.target.value}`)
       .then(res => {
         allData = res.data
         createTableRows()
@@ -44,7 +44,7 @@ priceIcon.addEventListener('click', () => {
   console.log(priceSvg.classList.toggle('x'))
   if (priceSvg.classList.toggle('x')) {
     axios
-      .get(URL + '?_sort=price')
+      .get(URL + '?_sort=price&_order=desc')
       .then(res => {
         allData = res.data
         createTableRows()
@@ -53,7 +53,7 @@ priceIcon.addEventListener('click', () => {
   }
   if (priceSvg.classList.toggle('x')) {
     axios
-      .get(URL + '?_sort=-price')
+      .get(URL + '?_sort=price&_order=asc')
       .then(res => {
         allData = res.data
         createTableRows()
@@ -66,7 +66,7 @@ dateIcon.addEventListener('click', e => {
   console.log(dateSvg.classList.toggle('x'))
   if (dateSvg.classList.toggle('x')) {
     axios
-      .get(URL + '?_sort=date')
+      .get(URL + '?_sort=date&_order=desc')
       .then(res => {
         allData = res.data
         createTableRows()
@@ -75,7 +75,7 @@ dateIcon.addEventListener('click', e => {
   }
   if (dateSvg.classList.toggle('x')) {
     axios
-      .get(URL + '?_sort=-date')
+      .get(URL + '?_sort=date&_order=asc')
       .then(res => {
         allData = res.data
         createTableRows()
